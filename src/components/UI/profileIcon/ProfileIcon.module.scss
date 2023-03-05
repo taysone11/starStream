@@ -1,0 +1,7 @@
+
+.profileIcon_container {
+    @apply w-7 h-7 cursor-pointer overflow-hidden rounded-full ;
+    .profileIcon {
+        @apply w-full h-full object-contain ;
+    }
+}

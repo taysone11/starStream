@@ -1,0 +1,11 @@
+.films_page {
+   @apply bg-black  ;
+   min-width: 768px;
+   min-height:100vh;
+
+
+   .films_list {
+    @apply flex gap-8 justify-center flex-wrap px-4 py-4;
+   }
+}
+

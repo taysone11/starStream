@@ -1,0 +1,10 @@
+.input_container {
+  @apply flex items-center relative;
+
+  .input {
+    @apply border border-gray-500 border-solid rounded-2xl pl-8 py-1 focus:outline-none focus:shadow-lg shadow-gray-600;
+  }
+  .icon {
+    @apply absolute left-2 text-gray-400 text-xl;
+  }
+}

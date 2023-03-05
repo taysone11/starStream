@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import AppRouter from './router/AppRouter';
+import { getFilms } from './API';
+import { createContext, useEffect, useState } from 'react';
+import f from "./data/film.json"
+
+
+export const FilmContext = createContext([])
 
 function App() {
+  const [films, setFilms] = useState(f)
+
+  async function getList() {
+    const list = await getFilms()
+    setFilms(list)
+    }  
+
+
+  // useEffect(() => {
+  //   getList()
+  // }, [])
+
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FilmContext.Provider value={films}>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <AppRouter/>
+        </div>
+      </Router>
+    </FilmContext.Provider> 
   );
 }
 

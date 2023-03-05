@@ -1,0 +1,28 @@
+.modal {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+
+    &.entering {
+        animation: show-modal .5s forwards;
+    }
+    &.exiting {
+        animation: show-modal .5s reverse;
+    }
+
+}
+
+@keyframes show-modal {
+    0% {
+        // @apply opacity-0 -translate-y-0;
+        opacity: 0;
+        
+
+
+    }
+
+    100%{
+
+        // @apply opacity-1 -translate-y-1/2;
+        opacity: 1;
+
+    }
+}

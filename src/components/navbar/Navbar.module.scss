@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+.navbar {
+  @apply flex items-center justify-between bg-black px-4 py-3 ;
+  min-width: 768px;
+
+  .pages {
+    @apply  flex gap-3 items-center justify-center font-tilt text-lg;
+    a {
+      @apply cursor-pointer px-2 py-1 text-grey;
+    }
+    .active_page {
+      @apply border-b-2 border-solid border-purple-600 text-white font-medium;
+    }
+  }
+  .logo {
+    @apply w-48 cursor-pointer;
+    .img {
+      @apply w-full h-full object-contain;
+    }
+  }
+  .icon {
+    @apply text-white;
+  }
+
+  .system_button {
+    @apply flex items-center px-3 gap-5;
+  }
+}

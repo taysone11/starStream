@@ -1,0 +1,57 @@
+
+
+.modalFilm_card {
+    @apply  border border-solid border-black  
+            bg-dark-grey rounded-lg;
+    width: 720px;
+    //fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+
+    .film {
+        @apply flex ; 
+        .image_wrapper {
+            @apply w-2/5 p-2;
+
+            .image {
+                @apply w-full h-full object-contain;
+
+            }
+        }
+        .about {
+            @apply p-6 pt-7 text-white relative  ;
+
+            .btn_close {
+                @apply absolute right-1 top-1.5 text-gray-400
+            }
+            
+            .title {
+                @apply text-3xl p-1 ;
+            }
+            .little_inf {
+                @apply flex justify-between w-3/5 px-1 py-3 text-gray-300 text-sm ;
+            }
+            .description {
+                @apply w-96 py-3 h-46  text-lg  ;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical; 
+            }
+            .trailer_btn {
+                @apply  mt-10 px-2 pr-4 py-1 rounded-md border-2 border-purple-700 flex gap-2 items-center hover:opacity-70 transition-all ease-in ;
+                &:hover .btn_icon {
+                    @apply text-purple-700 transition-all ease-in;
+                }
+                
+            }
+            .btn_icon {
+                @apply text-xl mb-0.5 ;
+            }
+            .btn_text {
+                @apply text-2xs ;
+            }
+        }
+    }
+
+}
+// 

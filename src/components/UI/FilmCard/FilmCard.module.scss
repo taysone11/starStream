@@ -1,0 +1,10 @@
+.card {
+
+    @apply flex w-48 overflow-hidden rounded-md hover:ease-in hover:scale-105 transition duration-200 cursor-pointer hover:shadow-xl hover:shadow-lg ;
+ 
+    .poster {
+        @apply w-full h-full object-contain;
+    }
+
+    
+}
