@@ -12,6 +12,11 @@ const films = useContext(FilmContext)
   const [modalFilm,setModalFilm] = useState(null)
   
 
+  useEffect(() => {
+    if (modalOpen === 'true') {
+
+    }
+  },[modalOpen])
 
 function getModalFilmCard(film) {
     setModalOpen(true)
@@ -25,6 +30,12 @@ function closeModalFilmCard() {
     setModalOpen(false)
   }
 
+  window.onclick = (e) => {
+    if (e.target === document.querySelector(".modal_bg")) {
+        closeModalFilmCard()
+    }
+  }
+
   
   return (
     <div className={styles.films_page}>
@@ -32,7 +43,7 @@ function closeModalFilmCard() {
         {/* <button onClick={get} className="bg-white">asdasd</button> */}
         {
           films.map(film => 
-            <FilmCard film={film} onClick={() => getModalFilmCard(film)}/>
+            <FilmCard film={film} showModal={() => getModalFilmCard(film)}/>
 
             )
         }
@@ -43,7 +54,12 @@ function closeModalFilmCard() {
         unmountOnExit
         >
           
-          {state => <ModalFilmCard film={modalFilm} closeModal={closeModalFilmCard} className={`modal ${state}`}/>}
+          {state => <ModalFilmCard film={modalFilm} 
+          closeModal={closeModalFilmCard}
+           classNameWindow={`modal_window ${state}`}
+           classNameBG={`modal_bg ${state}`}
+           />}
+        
         </Transition>
           
       </div>

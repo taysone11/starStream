@@ -11,7 +11,8 @@ module.exports = {
       },
       colors: {
         'grey': '#BEBEBE',
-        'dark-grey':'#262626'
+        'dark-grey':'#262626',
+        'modal-windowBG':'rgba(16,16,16,0.9)'
       },
       margin: {
         0.45:0.45,

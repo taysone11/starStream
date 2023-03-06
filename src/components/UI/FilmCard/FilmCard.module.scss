@@ -1,9 +1,21 @@
 .card {
-
-    @apply flex w-48 overflow-hidden rounded-md hover:ease-in hover:scale-105 transition duration-200 cursor-pointer hover:shadow-xl hover:shadow-lg ;
+    
+    @apply flex w-48 overflow-hidden rounded-md hover:ease-in hover:scale-105 transition duration-200 cursor-pointer hover:shadow-xl hover:shadow-lg relative;
  
     .poster {
         @apply w-full h-full object-contain;
+    }
+
+    .btn {
+        @apply absolute right-1 top-1;
+    }
+
+    .btn_save {
+        @apply  text-white ;
+        
+    }
+    .btn_save_done {
+        @apply  text-red-600 ;
     }
 
     

@@ -12,6 +12,7 @@ export const FilmContext = createContext([])
 function App() {
   const [films, setFilms] = useState(f)
 
+  
   async function getList() {
     const list = await getFilms()
     setFilms(list)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import img from "../../data/images/ss-logo1.png"
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton} from '@mui/material';
@@ -34,6 +34,14 @@ const PAGES = [
 
 const Navbar = () => {
   const [selected,setSelected] = useState(0)
+  useEffect(() => {
+    PAGES.forEach((el,index) => {
+      if (window.location.pathname === el.path) {
+        setSelected(index)
+      }
+    });
+  },[])
+  
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo} >
